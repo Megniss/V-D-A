@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtuālais Dārza Asistents</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Virtuālais Dārza Asistents</h1>
+        <p>Palīdzība dārzkopībā vienmēr pa rokai!</p>
+    </header>
+    
+    <section class="intro">
+        <h2>Laipni lūdzam!</h2>
+        <p>Pārvaldi savus augus, saņem laistīšanas atgādinājumus un uzlabo savu dārzu.</p>
+        <form id="plant-form">
+            <label for="plant-name">Ievadi sava auga nosaukumu:</label>
+            <input type="text" id="plant-name" required>
+            <button type="submit">Pievienot</button>
+        </form>
+    </section>
+    
+    <section class="garden">
+        <h2>Mani Augi</h2>
+        <div id="plant-list">
+        </div>
+    </section>
+
+    <section class="tips">
+        <h2>Kopšanas padomi</h2>
+        <p id="care-tips">Izvēlies augu, lai saņemtu kopšanas padomus.</p>
+    </section>
+    <script src="/static/script.js" async defer></script>
+    <footer>
+        <div id="footer-box">
+            <div id="footer-element">
+                &copy;Liepins,Megnis Plant™
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
