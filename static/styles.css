@@ -41,8 +41,9 @@ header {
 }
 
 #footer-box{
-    background-color: gray;
-    margin-top: 350px;
+    background-color: #4CAF50;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #footer-element{
@@ -52,8 +53,7 @@ header {
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-
+    color: white;
+    font-size: 15px;
 }
 
