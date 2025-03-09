@@ -1,3 +1,2 @@
-1. plant-list vajag pārtaisīt par pogām(html)
-2. izveidot aprūper padomus kurus ģenerēt ar fetch (js)
-3. pievienot bildes class="garedn" sekcijai(html)
+1. pievienot bildes class="garedn" sekcijai(html)
+2. izveido datubāzi prieks python(flask)
