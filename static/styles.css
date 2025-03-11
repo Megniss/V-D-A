@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Jolly+Lodger&family=Rock+Salt&display=swap');
+ 
+ .rock-salt-regular {
+     font-family: "Rock Salt", serif;
+     font-weight: 400;
+     font-style: normal;
+   }
+ 
+   body, html{
+    height: 100%;
+    background-image: url('/src');
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,10 +26,28 @@ header {
 }
 
 .intro {
-    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     padding: 20px;
-    background: white;
-    border-radius: 10px;
+}
+
+.intro-content {
+    max-width: 50%;
+}
+
+.intro-image {
+    width: 200px;
+    height: auto;
+}
+
+.left {
+    order: -1;
+}
+
+.right {
+    order: 1;
 }
 
 .garden {

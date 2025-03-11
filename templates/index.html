@@ -13,13 +13,20 @@
     </header>
     
     <section class="intro">
-        <h2>Laipni lūdzam!</h2>
-        <p>Pārvaldi savus augus, saņem laistīšanas atgādinājumus un uzlabo savu dārzu.</p>
-        <form id="plant-form">
-            <label for="plant-name">Ievadi sava auga nosaukumu:</label>
-            <input type="text" id="plant-name" required>
-            <button type="submit">Pievienot</button>
-        </form>
+        <img src="/static/img/plant1.jpg" alt="Attēls 1" class="intro-image left">
+
+        <div class="intro-content">
+            <h2>Laipni lūdzam!</h2>
+            <p>Pārvaldi savus augus, saņem laistīšanas atgādinājumus un uzlabo savu dārzu.</p>
+            <form id="plant-form">
+                <label for="plant-name">Ievadi sava auga nosaukumu:</label>
+                <input type="text" id="plant-name" required>
+                <label for="watering-interval">Laistīšanas intervāls (dienās):</label>
+                <input type="number" id="watering-interval" min="1" required>
+                <button type="submit">Pievienot</button>
+            </form>
+        </div>
+        <img src="/static/img/plant2.jpg" alt="Attēls 2" class="intro-image right">
     </section>
     
     <section class="garden">
