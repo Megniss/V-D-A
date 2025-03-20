@@ -27,15 +27,29 @@
         <p>Pārvaldi savus augus, saņem laistīšanas atgādinājumus un uzlabo savu dārzu.</p>
     </section>
 
+    <section id="add-plant">
+        <h2>Pievienot augu</h2>
+        <form id="plant-form">
+            <label for="plant-name">Auga nosaukums:</label>
+            <input type="text" id="plant-name" required>
+    
+            <label for="watering-interval">Laistīšanas intervāls (dienās):</label>
+            <input type="number" id="watering-interval" min="1" required>
+    
+            <button type="submit">Pievienot augu</button>
+        </form>
+    </section>
+    
     <section id="garden" class="garden">
         <h2>Mani Augi</h2>
         <div id="plant-list"></div>
     </section>
-
+    
     <section id="tips" class="tips">
         <h2>Kopšanas padomi</h2>
         <p id="care-tips">Izvēlies augu, lai saņemtu kopšanas padomus.</p>
     </section>
+    
 
     <section id="forest-facts" class="forest-facts">
         <h2>Mežu fakti</h2>
@@ -46,8 +60,7 @@
     <section id="contact" class="contact">
         <h2>Kontakti</h2>
         <p><strong>E-pasts:</strong> info@darzsassistents.lv</p>
-        <p><strong>Tālrunis:</strong> +371 123 4567</p>
-        <p><strong>Adrese:</strong> Brīvības iela 10, Rīga, Latvija</p>
+        <p><strong>Tālrunis:</strong> +371 12 345 678  +371 876 543 21</p>
     </section>
 
     <div id="footer-info">

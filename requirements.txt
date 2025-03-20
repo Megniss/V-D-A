@@ -1,2 +1,0 @@
-1. pievienot bildes class="garedn" sekcijai(html)
-2. izveido datubāzi prieks python(flask)

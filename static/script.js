@@ -95,14 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let generateFactButton = document.getElementById("generate-fact");
     let factDisplay = document.getElementById("fact-display");
 
-    if (!generateFactButton || !factDisplay) {
+    if (generateFactButton && factDisplay) {
+        generateFactButton.addEventListener("click", function () {
+            let randomFact = forestFacts[Math.floor(Math.random() * forestFacts.length)];
+            factDisplay.textContent = randomFact;
+        });
+    } else {
         console.error("Nevar atrast 'generate-fact' vai 'fact-display' elementu!");
-        return;
     }
-
-    generateFactButton.addEventListener("click", function () {
-        console.log("Poga tika nospiesta!");
-        let randomFact = forestFacts[Math.floor(Math.random() * forestFacts.length)];
-        factDisplay.textContent = randomFact;
-    });
 });
