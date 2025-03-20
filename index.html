@@ -16,27 +16,17 @@
                 <li><a href="#garden">Mani Augi</a></li>
                 <li><a href="#tips">Padomi</a></li>
                 <li><a href="#forest-facts">Mežu Fakti</a></li>
+                <li><a href="#contact">Kontakti</a></li>
                 <li><a href="#about">Par Mums</a></li>
             </ul>
-        </nav>
+        </nav>        
     </header>
-    
+
     <section id="intro" class="intro">
-        <img src="/static/img/plant1.jpg" alt="Attēls 1" class="intro-image left">
-        <div class="intro-content">
-            <h2>Laipni lūdzam!</h2>
-            <p>Pārvaldi savus augus, saņem laistīšanas atgādinājumus un uzlabo savu dārzu.</p>
-            <form id="plant-form">
-                <label for="plant-name">Ievadi sava auga nosaukumu:</label>
-                <input type="text" id="plant-name" required>
-                <label for="watering-interval">Laistīšanas intervāls (dienās):</label>
-                <input type="number" id="watering-interval" min="1" required>
-                <button type="submit">Pievienot</button>
-            </form>
-        </div>
-        <img src="/static/img/plant2.jpg" alt="Attēls 2" class="intro-image right">
+        <h2>Laipni lūdzam!</h2>
+        <p>Pārvaldi savus augus, saņem laistīšanas atgādinājumus un uzlabo savu dārzu.</p>
     </section>
-    
+
     <section id="garden" class="garden">
         <h2>Mani Augi</h2>
         <div id="plant-list"></div>
@@ -47,17 +37,23 @@
         <p id="care-tips">Izvēlies augu, lai saņemtu kopšanas padomus.</p>
     </section>
 
-    <section class="forest-facts">
+    <section id="forest-facts" class="forest-facts">
         <h2>Mežu fakti</h2>
-        <p id="fact-display">Spied pogu, lai uzzinātu interesantu faktu par mežiem.</p>
+        <p id="fact-display">Nospied pogu, lai ģenerētu nejaušu faktu.</p>
         <button id="generate-fact">Ģenerēt faktu</button>
-    </section>
-    
+    </section>    
 
-    <section id="about" class="about">
-        <h2>Par Mums</h2>
-        <p>Virtuālais Dārza Asistents ir radīts, lai palīdzētu dārzkopjiem pārvaldīt un rūpēties par saviem augiem efektīvāk.</p>
+    <section id="contact" class="contact">
+        <h2>Kontakti</h2>
+        <p><strong>E-pasts:</strong> info@darzsassistents.lv</p>
+        <p><strong>Tālrunis:</strong> +371 123 4567</p>
+        <p><strong>Adrese:</strong> Brīvības iela 10, Rīga, Latvija</p>
     </section>
+
+    <div id="footer-info">
+        <h3>Sazinies ar mums</h3>
+        <p>Ja ir kādi jautājumi, droši sazinies ar mūsu atbalsta komandu!</p>
+    </div>
 
     <footer>
         <div id="footer-box">
@@ -67,7 +63,7 @@
             <button id="download-guide">Lejupielādēt Lietošanas Pamācību</button>
         </div>
     </footer>
-    
+
     <script src="/static/script.js" async defer></script>
 </body>
 </html>
