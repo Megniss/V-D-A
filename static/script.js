@@ -81,3 +81,20 @@ function checkWateringReminders() {
     if (message) alert(message);
 }
 setInterval(checkWateringReminders, 30000);
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("generate-fact").addEventListener("click", function () {
+        let facts = [
+            "Meži aizņem apmēram 31% no visas sauszemes platības uz Zemes.",
+            "Vienā kokā var mitināties līdz pat 500 dažādu sugu dzīvnieku un augu.",
+            "Tropu meži ražo vairāk nekā 20% pasaules skābekļa.",
+            "Lielākais mežs pasaulē ir Amazones lietusmežs.",
+            "Koki var sazināties savā starpā, izmantojot saknes un sēņu tīklus.",
+            "Koki palīdz samazināt trokšņu piesārņojumu pilsētās.",
+            "Vecākie koki pasaulē ir vairāk nekā 4000 gadu veci.",
+            "Katrs hektārs meža var absorbēt līdz 10 tonnām oglekļa dioksīda gadā."
+        ];
+
+        let randomFact = facts[Math.floor(Math.random() * facts.length)];
+        document.getElementById("fact-display").textContent = randomFact;
+    });
+});

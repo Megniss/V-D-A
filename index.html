@@ -10,11 +10,19 @@
     <header>
         <h1>Virtuālais Dārza Asistents</h1>
         <p>Palīdzība dārzkopībā vienmēr pa rokai!</p>
+        <nav>
+            <ul>
+                <li><a href="#intro">Sākums</a></li>
+                <li><a href="#garden">Mani Augi</a></li>
+                <li><a href="#tips">Padomi</a></li>
+                <li><a href="#forest-facts">Mežu Fakti</a></li>
+                <li><a href="#about">Par Mums</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <section class="intro">
+    <section id="intro" class="intro">
         <img src="/static/img/plant1.jpg" alt="Attēls 1" class="intro-image left">
-
         <div class="intro-content">
             <h2>Laipni lūdzam!</h2>
             <p>Pārvaldi savus augus, saņem laistīšanas atgādinājumus un uzlabo savu dārzu.</p>
@@ -29,23 +37,37 @@
         <img src="/static/img/plant2.jpg" alt="Attēls 2" class="intro-image right">
     </section>
     
-    <section class="garden">
+    <section id="garden" class="garden">
         <h2>Mani Augi</h2>
-        <div id="plant-list">
-        </div>
+        <div id="plant-list"></div>
     </section>
 
-    <section class="tips">
+    <section id="tips" class="tips">
         <h2>Kopšanas padomi</h2>
         <p id="care-tips">Izvēlies augu, lai saņemtu kopšanas padomus.</p>
     </section>
-    <script src="/static/script.js" async defer></script>
+
+    <section class="forest-facts">
+        <h2>Mežu fakti</h2>
+        <p id="fact-display">Spied pogu, lai uzzinātu interesantu faktu par mežiem.</p>
+        <button id="generate-fact">Ģenerēt faktu</button>
+    </section>
+    
+
+    <section id="about" class="about">
+        <h2>Par Mums</h2>
+        <p>Virtuālais Dārza Asistents ir radīts, lai palīdzētu dārzkopjiem pārvaldīt un rūpēties par saviem augiem efektīvāk.</p>
+    </section>
+
     <footer>
         <div id="footer-box">
             <div id="footer-element">
                 LetItGrow© VDA™
             </div>
+            <button id="download-guide">Lejupielādēt Lietošanas Pamācību</button>
         </div>
     </footer>
+    
+    <script src="/static/script.js" async defer></script>
 </body>
 </html>
