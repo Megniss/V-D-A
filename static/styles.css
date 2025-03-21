@@ -65,6 +65,9 @@ main {
     order: 1;
 }
 
+.add-plant{
+    text-align: center;
+}
 .garden {
     display: flex;
     flex-wrap: wrap;
@@ -135,7 +138,7 @@ button {
     text-align: center;
     margin: 30px 10px;
     padding: 20px;
-    background: #dcedc8;
+    background: #4CAF50;
     border-radius: 10px;
 }
 
@@ -204,13 +207,13 @@ nav a:hover {
 }
 
 .forest-facts button:active {
-    background: #2E7D32;
+    background: #4CAF50;
     transform: scale(0.95);
 }
 
 .contact, #footer-info {
     text-align: center;
-    background: #e8f5e9;
+    background: #4CAF50;    
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
@@ -218,10 +221,31 @@ nav a:hover {
 }
 
 .contact h2, #footer-info h3 {
-    color: #2E7D32;
+    color: black
 }
 
 #footer-info p {
+    font-size: 10px;
+    color: black
+}
+
+#download-btn {
+    background-color: #8B5A2B;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
     font-size: 16px;
-    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#download-btn:hover {
+    background-color: #A0522D;
+    transform: scale(1.05);
+}
+
+#download-btn:active {
+    background-color: #5C4033;
+    transform: scale(0.98);
 }
