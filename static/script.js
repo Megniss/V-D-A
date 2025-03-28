@@ -2,13 +2,16 @@ document.getElementById("plant-form").addEventListener("submit", function(event)
     event.preventDefault();
 
     let plantName = document.getElementById("plant-name").value.trim();
-    if (!plantName) return;
+    let wateringInterval = parseInt(document.getElementById("watering-interval").value);
+
+    if (!plantName || isNaN(wateringInterval) || wateringInterval < 1) return;
 
     let plantList = document.getElementById("plant-list");
     let plantButton = document.createElement("button");
 
     plantButton.classList.add("plant-card");
-    plantButton.innerHTML = `<h3>${plantName}</h3><p>Laistīšanas atgādinājums tiks ģenerēts.</p>`;
+    plantButton.innerHTML = `<h3>${plantName}</h3><p>${plantName} ir jāaplaista pēc ${wateringInterval} dienām.</p>`;
+
     plantButton.addEventListener("click", function() {
         let tips = [
             "Regulāri pārbaudiet augsnes mitrumu pirms laistīšanas.",
@@ -28,24 +31,7 @@ document.getElementById("plant-form").addEventListener("submit", function(event)
     });
 
     plantList.appendChild(plantButton);
-    document.getElementById("plant-name").value = "";
-});
-
-document.getElementById("plant-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    let plantName = document.getElementById("plant-name").value.trim();
-    let wateringInterval = parseInt(document.getElementById("watering-interval").value);
-
-    if (!plantName || isNaN(wateringInterval) || wateringInterval < 1) return;
-
-    let plantList = document.getElementById("plant-list");
-    let plantButton = document.createElement("button");
-
-    plantButton.classList.add("plant-card");
-    plantButton.innerHTML = `<h3>${plantName}</h3><p>Laistīt ik pēc ${wateringInterval} dienām.</p>`;
     
-    plantList.appendChild(plantButton);
     let nextWateringDate = new Date();
     nextWateringDate.setDate(nextWateringDate.getDate() + wateringInterval);
 
@@ -60,6 +46,7 @@ document.getElementById("plant-form").addEventListener("submit", function(event)
     document.getElementById("plant-name").value = "";
     document.getElementById("watering-interval").value = ""; 
 });
+
 function checkWateringReminders() {
     let now = new Date().getTime();
     let message = "";
@@ -69,7 +56,8 @@ function checkWateringReminders() {
         let plantData = JSON.parse(localStorage.getItem(plantKey));
 
         if (plantData.nextWatering <= now) {
-            message += `Ir pienācis laiks laistīt: ${plantData.name}\n`;
+            message += `${plantData.name} ir jāaplaista šodien!\n`;
+
             let newDate = new Date();
             newDate.setDate(newDate.getDate() + plantData.interval);
             plantData.nextWatering = newDate.getTime();
@@ -80,3 +68,5 @@ function checkWateringReminders() {
 
     if (message) alert(message);
 }
+
+setInterval(checkWateringReminders, 5000);
